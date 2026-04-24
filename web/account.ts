@@ -4,12 +4,15 @@ type AccountMatcher = (accounts: Account[]) => Account[];
 
 export class AccountQuery {
     private matchers: AccountMatcher[];
+    private criteria: Set<string>;
 
     constructor() {
         this.matchers = [];
+        this.criteria = new Set();
     }
 
-    match(matcher: AccountMatcher): AccountQuery {
+    match(criteria: string, matcher: AccountMatcher): AccountQuery {
+        this.criteria.add(criteria);
         this.matchers.push(matcher);
         return this;
     }
@@ -20,40 +23,50 @@ export class AccountQuery {
 
     findOne(accounts: Account[]): Account | undefined {
         const account = this.findAll(accounts)[0];
-        test.fixme(!account, '[NO DATA] No account match the criteria');
+        const message = `[NO DATA] No account match the criteria: ${[...this.criteria].join(', ')}`;
+        !account && console.error(message);
+        test.fixme(!account, message);
         return account;
     }
 
     get canReadEmail(): AccountQuery {
-        return this.match(all => all.filter(a => !!a.emailAccount && (!a.emailAccount.expiresAt || a.emailAccount.expiresAt < new Date())));
+        return this.match('can read email', all => all.filter(a => !!a.emailAccount && (!a.emailAccount.expiresAt || a.emailAccount.expiresAt < new Date())));
     }
 
     get hasAddresses(): AccountQuery {
-        return this.match(all => all.filter(a => !!a.addressCount && a.addressCount > 0));
+        return this.match('has addresses', all => all.filter(a => !!a.addressCount && a.addressCount > 0));
     }
 
     get notHasAddresses(): AccountQuery {
-        return this.match(all => all.filter(a => a.addressCount === 0));
+        return this.match('no addresses', all => all.filter(a => a.addressCount === 0));
     }
 
     get hasOrders(): AccountQuery {
-        return this.match(all => all.filter(a => !!a.orderCount && a.orderCount > 0));
+        return this.match('has orders', all => all.filter(a => !!a.orderCount && a.orderCount > 0));
     }
 
     get hasWishlists(): AccountQuery {
-        return this.match(all => all.filter(a => !!a.wishlistCount && a.wishlistCount > 0));
+        return this.match('has wishlists', all => all.filter(a => !!a.wishlistCount && a.wishlistCount > 0));
+    }
+
+    get reward(): AccountQuery {
+        return this.match('reward', all => all.filter(a => !!a.reward));
+    }
+
+    rewardLevel(level: 'Bronze' | 'Silver' | 'Gold' | 'Platinum' | string): AccountQuery {
+        return this.match(`reward level ${level}`, all => all.filter(a => typeof a.reward === 'object' && a.reward.level === level));
     }
 
     eppRegistered(storeUid: string): AccountQuery {
-        return this.match(all => all.filter(a => a.eppRegistered?.some(epp => epp == storeUid) ?? false));
+        return this.match(`${storeUid} registered`, all => all.filter(a => a.eppRegistered?.some(epp => epp == storeUid) ?? false));
     }
 
     notEppRegistered(storeUid: string): AccountQuery {
-        return this.match(all => all.filter(a => !!a.eppRegistered && !a.eppRegistered.some(s => s == storeUid)));
+        return this.match(`not ${storeUid} registered`, all => all.filter(a => !!a.eppRegistered && !a.eppRegistered.some(s => s == storeUid)));
     }
 
     nth(index: number): AccountQuery {
-        return this.match(all => all[index - 1] ? [all[index - 1]] : []);
+        return this.match(`nth ${index}`, all => all[index - 1] ? [all[index - 1]] : []);
     }
 }
 
@@ -63,6 +76,10 @@ export default class AccountFinder {
     }
 
     static email(email: string): AccountQuery {
-        return new AccountQuery().match(all => all.filter(a => a.email == email));
+        return new AccountQuery().match(`email == ${email}`, all => all.filter(a => a.email == email));
+    }
+
+    static notIn(emails: string[]): AccountQuery {
+        return new AccountQuery().match(`not in [${emails.join(', ')}]`, all => all.filter(a => !emails.includes(a.email)));
     }
 };

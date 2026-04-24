@@ -25,5 +25,30 @@ export default defineConfig({
     userAgent: 'D2CEST-AUTO-70a4cf16 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36.D2CEST-AUTO-70a4cf16',
     viewport: null
   },
-  timeout: 180000
+  timeout: 300000,
+
+  /* Configure projects */
+  projects: [
+    {
+      name: 'Core',
+      use: {
+        contextOptions: {
+          permissions: ['clipboard-read', 'clipboard-write'],
+        },
+        launchOptions: { args: ['--start-maximized'] },
+        actionTimeout: 10000,
+        navigationTimeout: 30000
+      },
+    },
+    {
+      name: 'Regression',
+      testDir: 'regression',
+      use: {
+        contextOptions: {
+          permissions: ['clipboard-read', 'clipboard-write'],
+        },
+        launchOptions: { args: ['--start-maximized'] }
+      },
+    }
+  ],
 });

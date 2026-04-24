@@ -90,7 +90,7 @@ export default class Cart {
                 assert(btn, 'Checkout button is not visible');
                 assert(await btn.isEnabled(), 'Checkout button is not enabled');
                 await btn.click().catch(() => { throw new Error('Checkout button is not clickable') });
-                await btn.waitForElementState('hidden').catch(() => { throw new Error('Checkout button is not working') });
+                await btn.waitForElementState('hidden', { timeout: 30000 }).catch(() => { throw new Error('Checkout button is not working') });
                 break;
             } catch (error) {
                 if (tries == 2) throw error;

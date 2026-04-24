@@ -22,6 +22,10 @@ declare global {
             session?: string;
             expiresAt?: Date;
         }
+        reward?: boolean | {
+            level?: 'Bronze' | 'Silver' | 'Gold' | 'Platinum' | string;
+            points?: number;
+        };
         eppRegistered?: string[];
         lastLoginAt?: Date;
     }
@@ -41,12 +45,14 @@ declare global {
         scp?: boolean;
         stdSCP?: boolean;
         subSCP?: boolean;
+        daSub?: boolean;
         sim?: boolean;
         flex?: boolean;
         flexUpgrade?: boolean;
         galaxyClub?: boolean;
         warranty?: boolean;
         canBuy?: boolean;
+        deliveryOptions?: string[];
     }
 
     type PriceData = {

@@ -17,6 +17,7 @@ export type TestData = {
     product?: Product;
     product2?: Product;
     product3?: Product;
+    product4?: Product;
 }
 
 export type TestState = {

@@ -1,0 +1,11 @@
+[
+  {
+    "email": "wwautotest01@wisewires.com",
+    "password": "wise1324!@",
+    "emailAccount": {
+      "url": "https://webmail.wisewires.com",
+      "account": "wwautotest01@wisewires.com",
+      "password": "wise1324!@"
+    }
+  }
+]

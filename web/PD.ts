@@ -51,7 +51,7 @@ export default class PD {
         try {
             await this.addToCartBtn.or(this.getStockAlertBtn).waitFor({ timeout: 30000 });
         } catch (error) {
-            throw new Error('BC page is not loaded successfully');
+            throw new Error('PD page is not loaded successfully');
         }
     }
 

@@ -26,6 +26,7 @@ export type TestArgs = TestEnv & {
     product?: ProductQuery;
     product2?: ProductQuery;
     product3?: ProductQuery;
+    product4?: ProductQuery;
 }
 
 export type Fixtures = {
@@ -54,6 +55,7 @@ export const test = base.extend<TestArgs & Fixtures>({
     product: [undefined, { option: true }],
     product2: [undefined, { option: true }],
     product3: [undefined, { option: true }],
+    product4: [undefined, { option: true }],
 
     accounts: async ({ env }, use) => {
         const dir = path.dirname(base.info().file);
@@ -76,7 +78,7 @@ export const test = base.extend<TestArgs & Fixtures>({
         await use(profile);
     }, { box: true }],
 
-    context: async ({ context, site, siteUid, env, envAEM, profile, accounts, products, account, product, product2, product3 }, use) => {
+    context: async ({ context, site, siteUid, env, envAEM, profile, accounts, products, account, product, product2, product3, product4 }, use) => {
         Object.assign(context, testContext({
             site,
             siteUid,
@@ -87,6 +89,7 @@ export const test = base.extend<TestArgs & Fixtures>({
             product: product?.findOne(products),
             product2: product2?.findOne(products),
             product3: product3?.findOne(products),
+            product4: product4?.findOne(products),
         }));
         await use(context);
     },
