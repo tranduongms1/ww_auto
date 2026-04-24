@@ -1,0 +1,24 @@
+{
+    "cluster": "SMA",
+    "stores": {
+        "ausme": "/business",
+        "accenture_au": "/multistore/auepp/accenture_au",
+        "samsung_education_au": "/multistore/auepp/samsung_education_au",
+        "samsung_au": "/multistore/auepp/samsung_au",
+        "accenture_au_bo": "/multistore/auepp/accenture_au_bo",
+        "fnf": "/multistore/auepp/fnf",
+        "family": "/multistore/auepp/family",
+        "au_o2o_ea_sample2": "/multistore/auepp/au_o2o_ea_sample2"
+    },
+    "apiDomains": {
+        "prod": "https://p1-sma-api-cdn.shop.samsung.com",
+        "stg2": "https://s2-sma-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "prod": "https://aep1-org.ecom.samsung.com/v1/exchange/api/aus",
+        "stg2": "https://aed1-org.ecom-qa.samsung.com/v1/exchange/api/aus"
+    },
+    "tariffEndpoints": {
+        "stg2": "https://aed1.ecom-qa.samsung.com/v4/carrier/api/aus/au"
+    }
+}

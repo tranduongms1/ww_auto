@@ -1,0 +1,18 @@
+{
+    "cluster": "SMS",
+    "stores": {
+        "mysme": "/business",
+        "eppsme": "/multistore/my_epp/eppsme",
+        "epp_publicbank": "/multistore/my_epp/epp_publicbank/",
+        "epp_micare": "/multistore/my_epp/epp_micare",
+        "epp_sme0": "/multistore/eppsme0/epp_sme0",
+        "my_members": "/multistore/my_epp/my_members"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-sms-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://icd1-org.ecom-qa.samsung.com/v1/exchange/api/mys"
+    }
+}

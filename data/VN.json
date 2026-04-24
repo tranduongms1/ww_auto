@@ -1,0 +1,10 @@
+{
+    "cluster": "SMS",
+    "stores": {
+        "vnepp": "/business"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-sms-api-cdn.ecom-stg.samsung.com"
+    }
+}

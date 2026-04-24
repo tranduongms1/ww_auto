@@ -1,0 +1,14 @@
+{
+    "cluster": "SMN",
+    "stores": {
+        "ptsme": "/business",
+        "ptstaffsales": "/multistore/ptepp/ptstaffsales"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smn-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://ewd1.ecom-qa.samsung.com/v1/exchange/api/prt"
+    }
+}

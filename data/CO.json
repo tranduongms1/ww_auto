@@ -1,0 +1,14 @@
+{
+    "cluster": "SMB",
+    "stores": {
+        "cosme": "/business",
+        "colaboradores_co": "/multistore/colaboradores_co/colaboradores_co"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smb-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://ued1.ecom-qa.samsung.com/v1/exchange/api/col"
+    }
+}

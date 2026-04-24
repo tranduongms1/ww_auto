@@ -1,0 +1,13 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# regression
+# !regression/tsconfig.json
+# tests/**/*.json
+# !tests/tsconfig.json

@@ -1,0 +1,16 @@
+{
+    "cluster": "SMN3",
+    "stores": {
+        "plsme": "/business",
+        "pl_epp_pko_bp": "/multistore/epp/pl_epp_pko_bp",
+        "eppedu": "/multistore/epp/eppedu",
+        "eppac": "/multistore/epp/eppac",
+        "eppc": "/multistore/eppc/eppc",
+        "employees": "/multistore/epp/employees",
+        "eppd2c": "/multistore/epp/eppd2c"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smn3-api-cdn.ecom-stg.samsung.com"
+    }
+}
