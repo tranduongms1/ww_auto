@@ -1,0 +1,10 @@
+{
+    "cluster": "SMS",
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-sms-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://icd1-org.ecom-qa.samsung.com/v1/exchange/api/sgp"
+    }
+}

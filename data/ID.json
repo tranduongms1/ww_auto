@@ -1,0 +1,16 @@
+{
+    "cluster": "SMS",
+    "stores": {
+        "smb": "/business",
+        "idepp": "/multistore/idepp/samsung_alumni/",
+        "sein_o2o": "/multistore/idb2c/sein_o2o",
+        "id_ea_oe": "/multistore/idb2c/id_ea_oe"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-sms-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://icd1-org.ecom-qa.samsung.com/v1/exchange/api/idr"
+    }
+}

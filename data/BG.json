@@ -1,0 +1,11 @@
+{
+    "cluster": "SMN3",
+    "stores": {
+        "bg_smb": "/multistore/bgepp/bg_smb",
+        "bg_employee": "/multistore/bgepp/bg_employee"
+    },
+    "apiDomains": {
+        "prod": "https://p1-smn3-api-cdn.shop.samsung.com",
+        "stg2": "https://s2-smn3-api-cdn.ecom-stg.samsung.com"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "cluster": "SMB",
+    "stores": {
+        "alianzas": "/multistore/alianzas/alianzas",
+        "cl_bancoestado": "/multistore/cl_bancoestado/cl_bancoestado",
+        "ventab2b_cl": "/multistore/ventab2b_cl/ventab2b_cl"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smb-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://ued1.ecom-qa.samsung.com/v1/exchange/api/chl"
+    }
+}

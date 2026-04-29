@@ -1,0 +1,15 @@
+{
+    "cluster": "SMA",
+    "stores": {
+        "jp_employee": "/multistore/sejepp/jp_employee",
+        "jpkumonepp": "/multistore/jpkumon/jpkumonepp",
+        "jpeducationepp": "/multistore/jpeducation/jpeducationepp",
+        "jp_partnerbk": "/multistore/sejepp/jp_partnerbk",
+        "jp_partnerbk_smbc": "/multistore/sejepp/jp_partnerbk_smbc",
+        "jp_partnerbk_mizuho": "/multistore/sejepp/jp_partnerbk_mizuho"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-sma-api-cdn.ecom-stg.samsung.com"
+    }
+}
