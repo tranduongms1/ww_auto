@@ -9,3 +9,5 @@ node_modules/
 
 tests/**/*.json
 !tests/tsconfig.json
+
+regression/**/.auth

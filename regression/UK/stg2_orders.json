@@ -1,0 +1,12 @@
+[
+  {
+    "number": "UKS260122-00083001",
+    "products": [
+      {
+        "sku": "SMR-UK-R2UK",
+        "reservation": true
+      }
+    ],
+    "status": "Cancelled"
+  }
+]

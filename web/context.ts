@@ -18,6 +18,7 @@ export type TestData = {
     product2?: Product;
     product3?: Product;
     product4?: Product;
+    order?: Order;
 }
 
 export type TestState = {

@@ -1,0 +1,150 @@
+[
+  {
+    "sku": "SM-F966BDBBEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-z-fold7/buy/?modelCode=SM-F966BDBBEUB",
+    "pfURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-z/",
+    "backOrder": true,
+    "tradeIn": true,
+    "scp": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-F956BAKBEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-z-fold6/buy/?modelCode=SM-F956BAKBEUB",
+    "tradeIn": false,
+    "scp": false,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-F741BLGHEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-z-flip6/buy/?modelCode=SM-F741BLGHEUB",
+    "tradeIn": true,
+    "galaxyClub": true,
+    "scp": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-F956BLIBEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-z-fold6/buy/?modelCode=SM-F956BLIBEUB",
+    "outOfStock": true
+  },
+  {
+    "sku": "SM-S948BZWHEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-s26/buy/?modelCode=SM-S948BZWHEUB",
+    "sim": false,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-S938BZDDEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-s25-ultra/buy/?modelCode=SM-S938BZDDEUB",
+    "scp": true,
+    "subSCP": true,
+    "tradeIn": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-R920NZKAEUA",
+    "bespokeSKU": "ET-SFR87LNEGEU",
+    "canBuy": true
+  },
+  {
+    "sku": "SM-S921BLGDEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-s24/buy/?modelCode=SM-S921BLGDEUB",
+    "scp": true,
+    "tradeIn": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-S921BLBDEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-s24/buy/?modelCode=SM-S921BLBDEUB",
+    "preOrder": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-S921BLGGEUB",
+    "type": "IM",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-s24/buy/?modelCode=SM-S921BLGGEUB",
+    "promotions": [],
+    "canBuy": true
+  },
+  {
+    "sku": "SM-S911BZEDEUB",
+    "type": "IM",
+    "flexUpgrade": true,
+    "scp": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-F721BLVGEUB",
+    "type": "IM",
+    "deliveryOptions": [
+      "SEUK-DPD",
+      "SEUK-DPD-WEEKDAY-ALLDAY-WEEE-50-G1-BO"
+    ],
+    "canBuy": true
+  },
+  {
+    "sku": "SM-A536BZKNEUB",
+    "type": "IM",
+    "pdURL": "https://p6-pre-qa2.samsung.com/uk/smartphones/galaxy-a/galaxy-a53-5g-awesome-black-128gb-sm-a536bzkneub/buy/",
+    "tradeIn": false,
+    "scp": true,
+    "canBuy": true
+  },
+  {
+    "sku": "RB34C632EBN/EU",
+    "type": "HA",
+    "pdURL": "https://p6-pre-qa2.samsung.com/uk/refrigerators/bottom-mount-freezer/rb7300t-spacemax-technology-341l-black-rb34c632ebn-eu/",
+    "tradeUp": false,
+    "canBuy": true
+  },
+  {
+    "sku": "QE55QN95BATXXU",
+    "type": "CE",
+    "tradeUp": true,
+    "canBuy": true
+  },
+  {
+    "sku": "QE65QN90CATXXU",
+    "type": "CE",
+    "preOrder": true,
+    "deliveryOptions": [
+      "SEUK-PANTHER-2M"
+    ],
+    "canBuy": true
+  },
+  {
+    "sku": "QE65S95CATXXU",
+    "type": "CE",
+    "backOrder": true,
+    "canBuy": true
+  },
+  {
+    "sku": "RA-B23EBB41GM",
+    "daSub": true,
+    "canBuy": true
+  },
+  {
+    "sku": "RS68A884CB1/EU",
+    "daSub": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SMR-UK-R2UK",
+    "reservation": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SMR-UK-R3UK",
+    "reservation": true,
+    "canBuy": true
+  }
+]

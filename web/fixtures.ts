@@ -28,6 +28,9 @@ export type TestArgs = TestEnv & {
     product2?: ProductQuery;
     product3?: ProductQuery;
     product4?: ProductQuery;
+
+    orders: Order[];
+    order?: OrderQuery;
 }
 
 export type Fixtures = {
@@ -57,6 +60,7 @@ export const test = base.extend<TestArgs & Fixtures>({
     product2: [undefined, { option: true }],
     product3: [undefined, { option: true }],
     product4: [undefined, { option: true }],
+    order: [undefined, { option: true }],
 
     accounts: async ({ env }, use) => {
         const dir = path.dirname(base.info().file);
@@ -74,12 +78,20 @@ export const test = base.extend<TestArgs & Fixtures>({
         writeFileSync(file, JSON.stringify(data, null, 2));
     },
 
+    orders: async ({ env, siteUid }, use) => {
+        const dir = path.dirname(base.info().file);
+        const file = path.join(dir, `${env}${siteUid ? `_${siteUid}` : ''}_orders.json`);
+        const data = existsSync(file) ? require(file) : [];
+        await use(data);
+        writeFileSync(file, JSON.stringify(data, null, 2));
+    },
+
     profile: [async ({ site }, use) => {
         const profile = require(`../data/${site.toUpperCase()}.json`);
         await use(profile);
     }, { box: true }],
 
-    context: async ({ context, site, siteUid, env, envAEM, profile, accounts, products, account, product, product2, product3, product4 }, use) => {
+    context: async ({ context, site, siteUid, env, envAEM, profile, accounts, products, orders, account, product, product2, product3, product4, order }, use) => {
         Object.assign(context, testContext({
             site,
             siteUid,
@@ -91,6 +103,7 @@ export const test = base.extend<TestArgs & Fixtures>({
             product2: await product2?.findOne(products),
             product3: await product3?.findOne(products),
             product4: await product4?.findOne(products),
+            order: await order?.findOne(orders),
         }));
         await use(context);
     },

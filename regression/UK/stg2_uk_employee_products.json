@@ -1,0 +1,24 @@
+[
+  {
+    "sku": "SM-S931BDBHEUB",
+    "bcURL": "https://p6-pre-qa2.samsung.com/uk/multistore/uk_employee/galaxy-s25/buy/?modelCode=SM-S931BDBHEUB",
+    "tradeIn": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-A165FLGBEUB",
+    "pdURL": "https://p6-pre-qa2.samsung.com/uk/multistore/uk_employee/buy.SM-A165FLGBEUB/",
+    "tradeIn": true,
+    "canBuy": true
+  },
+  {
+    "sku": "SM-R630NZWAEUA",
+    "pfURL": "https://p6-pre-qa2.samsung.com/uk/multistore/uk_employee/finder.audio-sound/?galaxy-buds3",
+    "canBuy": true
+  },
+  {
+    "sku": "SM-R630NZAAEUA",
+    "pdURL": "https://p6-pre-qa2.samsung.com/uk/multistore/uk_employee/pd.SM-R630NZAAEUA/",
+    "canBuy": true
+  }
+]

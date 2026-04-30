@@ -1,0 +1,89 @@
+[
+  {
+    "email": "wwautotest01@wisewires.com",
+    "password": "wise1324!@",
+    "emailInbox": {
+      "url": "https://webmail.wisewires.com",
+      "email": "wwautotest01@wisewires.com",
+      "password": "wise1324!@"
+    }
+  },
+  {
+    "email": "dnguyenww@gmail.com",
+    "password": "Dnguyenww1@",
+    "reward": {}
+  },
+  {
+    "email": "huyenpham94.ww+05@gmail.com",
+    "password": "W12w34!@",
+    "eppRegistered": [
+      "uk_business",
+      "uk_employee"
+    ]
+  },
+  {
+    "email": "trungbui040723@gmail.com",
+    "password": "kH224466!",
+    "hasCredit": true
+  },
+  {
+    "email": "wwauto1776931543017@teml.net",
+    "password": "Pass@word1",
+    "emailInbox": {
+      "url": "https://moakt.com/",
+      "email": "wwauto1776931543017@teml.net"
+    },
+    "addressCount": 0,
+    "orderCount": 0,
+    "wishlistCount": 0,
+    "eppRegistered": [
+      "uk_business"
+    ],
+    "lastLoginAt": "2026-04-23T08:06:37.414Z"
+  },
+  {
+    "email": "wwauto1776932387377@teml.net",
+    "password": "Pass@word1",
+    "emailInbox": {
+      "url": "https://moakt.com/",
+      "email": "wwauto1776932387377@teml.net"
+    },
+    "addressCount": 0,
+    "orderCount": 0,
+    "wishlistCount": 0,
+    "eppRegistered": [
+      "uk_business"
+    ],
+    "lastLoginAt": "2026-04-23T08:20:46.302Z"
+  },
+  {
+    "email": "wwauto1776941959472@teml.net",
+    "password": "Pass@word1",
+    "emailInbox": {
+      "url": "https://moakt.com/",
+      "email": "wwauto1776941959472@teml.net"
+    },
+    "addressCount": 0,
+    "orderCount": 0,
+    "wishlistCount": 0,
+    "eppRegistered": [
+      "uk_business"
+    ],
+    "lastLoginAt": "2026-04-23T11:00:10.844Z"
+  },
+  {
+    "email": "wwauto1776965860769@teml.net",
+    "password": "Pass@word1",
+    "emailInbox": {
+      "url": "https://moakt.com/",
+      "email": "wwauto1776965860769@teml.net"
+    },
+    "addressCount": 0,
+    "orderCount": 0,
+    "wishlistCount": 0,
+    "eppRegistered": [
+      "uk_business"
+    ],
+    "lastLoginAt": "2026-04-23T17:38:40.655Z"
+  }
+]

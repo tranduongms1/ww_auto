@@ -83,6 +83,14 @@ declare global {
         [key: string]: any;
     }
 
+    export type Order = {
+        number: string;
+        account: Account;
+        products: Product[];
+        status: 'Completed' | 'Cancelled' | string;
+        [key: string]: any;
+    }
+
     export interface MailService {
         email: string;
         openInbox(): Promise<void>;
