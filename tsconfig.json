@@ -14,5 +14,5 @@
       "fixtures": ["web/fixtures.ts"]
     }
   },
-  "include": ["web/**/*.ts", "tests/**/*.ts", "playwright.config.ts"]
+  "include": ["web/**/*.ts", "tests/**/*.ts", "regression/**/*.ts", "playwright.config.ts"]
 }

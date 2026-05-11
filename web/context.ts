@@ -1,6 +1,7 @@
 import type { BrowserContext, Page as BasePage } from 'playwright';
 import type { Account } from './account';
 import type { Product } from './product';
+import type { Order } from './order';
 
 export type AEMEnv = 'p6-pre-qa' | 'p6-pre-qa2';
 
@@ -21,6 +22,7 @@ export type TestData = {
     product2?: Product;
     product3?: Product;
     product4?: Product;
+    order?: Order;
 
     checkoutEmail: string;
 }

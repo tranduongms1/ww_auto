@@ -26,5 +26,22 @@ export default defineConfig({
     viewport: null,
     launchOptions: { args: ['--start-maximized'] }
   },
-  timeout: 180000
+  timeout: 300000,
+
+  /* Configure projects */
+  projects: [
+    {
+      name: 'Core',
+      testDir: 'tests'
+    },
+    {
+      name: 'Regression',
+      testDir: 'regression',
+      use: {
+        contextOptions: {
+          permissions: ['clipboard-read', 'clipboard-write'],
+        }
+      },
+    }
+  ],
 });

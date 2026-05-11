@@ -7,6 +7,7 @@ import { navigatedTo } from './expect';
 import { messages, Errors } from './errors';
 import { Account, AccountQuery } from './account';
 import { Product, ProductQuery } from './product';
+import { Order, OrderQuery } from './order';
 import API from './API';
 import BC from './BC';
 import Cart from './Cart';
@@ -32,6 +33,9 @@ export type TestArgs = TestEnv & {
     product2?: ProductQuery;
     product3?: ProductQuery;
     product4?: ProductQuery;
+
+    orders: Order[];
+    order?: OrderQuery;
 }
 
 export type Fixtures = {
@@ -68,6 +72,7 @@ export const test = base.extend<TestArgs & Fixtures>({
     product2: [undefined, { option: true }],
     product3: [undefined, { option: true }],
     product4: [undefined, { option: true }],
+    order: [undefined, { option: true }],
 
     accounts: async ({ env, workingDir }, use) => {
         const dir = workingDir || path.dirname(base.info().file);
@@ -82,6 +87,16 @@ export const test = base.extend<TestArgs & Fixtures>({
     products: async ({ env, siteUid, workingDir }, use) => {
         const dir = workingDir || path.dirname(base.info().file);
         const file = path.join(dir, `${env}${siteUid ? `_${siteUid}` : ''}_products.json`);
+        const data = existsSync(file) ? require(file) : [];
+        await use(data);
+        if (existsSync(file)) {
+            writeFileSync(file, JSON.stringify(data, null, 2));
+        }
+    },
+
+    orders: async ({ env, siteUid, workingDir }, use) => {
+        const dir = workingDir || path.dirname(base.info().file);
+        const file = path.join(dir, `${env}${siteUid ? `_${siteUid}` : ''}_orders.json`);
         const data = existsSync(file) ? require(file) : [];
         await use(data);
         if (existsSync(file)) {
@@ -106,7 +121,7 @@ export const test = base.extend<TestArgs & Fixtures>({
         await use(existsSync(filename) ? filename : undefined);
     },
 
-    context: async ({ context, site, siteUid, env, envAEM, profile, asRegistered, accounts, products, account, product, product2, product3, product4 }, use) => {
+    context: async ({ context, site, siteUid, env, envAEM, profile, asRegistered, accounts, products, orders, account, product, product2, product3, product4, order }, use) => {
         Object.assign(context, testContext({
             site,
             siteUid,
@@ -119,6 +134,7 @@ export const test = base.extend<TestArgs & Fixtures>({
             product2: await product2?.findOne(products),
             product3: await product3?.findOne(products),
             product4: await product4?.findOne(products),
+            order: await order?.findOne(orders),
             checkoutEmail: 'autotest@wisewires.com'
         }));
         await use(context);
