@@ -1,0 +1,41 @@
+import { test, expect } from 'fixtures';
+import product from 'product';
+
+const title = 'Guest: Create Cart by CS Agent';
+const tag = ['@Tier2'];
+
+test.use({ site: 'UK' });
+test.use({ product: product.any.hasPD.tradeIn.scp.canBuy });
+
+test(title, { tag }, async ({ context, page, pd, cart }) => {
+    const product = context.product!;
+
+    await test.step('ASM Login', async () => {
+        await page.goto(context.shopURL + '?asm=true');
+
+        await expect(page.getByText('Assisted Service Mode'), 'ASM Login is not displayed').toBeVisible({ timeout: 30000 });
+        await page.getByRole('textbox', { name: 'Agent ID' }).fill('Automation_Reg');
+        await page.getByRole('textbox', { name: 'Password' }).fill('Admin1234!@@');
+        await page.getByRole('button', { name: 'Sign in' }).click();
+        await page.getByTitle('Sign out').waitFor();
+
+        await page.waitForTimeout(3000);
+    });
+
+    pd.product = product;
+    await page.goto(product.pdURL!);
+    await pd.waitForAddToCartButton();
+    await pd.addToCartBtn.click();
+
+    await expect(page).navigatedTo(context.cartURL);
+    await cart.waitForLoad();
+    await expect(cart).containSKU(product.sku);
+    await expect(cart.rhs.checkoutBtn).toBeVisible();
+
+    await cart.addToCart(product);
+    await expect(cart).containSKU(product.sku);
+    await expect(cart.rhs.checkoutBtn).toBeVisible();
+
+    await cart.continueToCheckout();
+    await expect(page).navigatedTo(context.checkoutURL);
+});
