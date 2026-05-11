@@ -1,0 +1,20 @@
+{
+    "cluster": "SMB",
+    "stores": {
+        "estudiantes_mx": "/multistore/estudiantes_mx/estudiantes_mx",
+        "santander_mx": "/multistore/santander_mx/santander_mx",
+        "empleados_mx": "/multistore/empleados_mx/empleados_mx",
+        "pymesmx": "/multistore/pymesmx/pymesmx",
+        "empresas_mx": "/multistore/empresas_mx/empresas_mx",
+        "totalplay_mx": "/multistore/totalplay_mx/totalplay_mx",
+        "samsungmembers_mx": "/multistore/samsungmembers_mx/samsungmembers_mx",
+        "mx_enlaces": "/multistore/mx_enlaces/mx_enlaces",
+        "mx_banamex": "/multistore/banamex/mx_banamex",
+        "pymes": "/multistore/pymes/pymes",
+        "mx_eaothers": "/multistore/mx_eaothers/mx_eaothers"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smb-api-cdn.ecom-stg.samsung.com"
+    }
+}

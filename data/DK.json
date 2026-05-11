@@ -1,0 +1,18 @@
+{
+    "cluster": "SMN",
+    "stores": {
+        "smb": "/business",
+        "corporate": "/multistore/dkb2b/corporatedk/registrationdetails",
+        "benify": "/multistore/dkb2b/benifydk"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smn-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://ewd1.ecom-qa.samsung.com/v1/exchange/api/dnk"
+    },
+    "tariffEndpoints": {
+        "stg2": "https://ewd1.ecom-qa.samsung.com/v4/carrier/api/dnk/dk"
+    }
+}

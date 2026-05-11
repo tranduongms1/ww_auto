@@ -1,0 +1,13 @@
+{
+    "cluster": "SMS",
+    "stores": {},
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-sms-api-cdn.ecom-stg.samsung.com"
+    },
+    "tradeIn": {
+        "brand": "Apple",
+        "model": "iPhone 14",
+        "imei": "351421792930037"
+    }
+}

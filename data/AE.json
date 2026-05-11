@@ -1,0 +1,12 @@
+{
+    "cluster": "SMI",
+    "stores": {
+        "aesme": "/business",
+        "samsung_employee": "/multistore/aeepp/samsung_employee",
+        "vip_members": "/multistore/aeepp/vip_members"
+    },
+    "apiDomains": {
+        "prod": "https://p1-smi-api-cdn.shop.samsung.com",
+        "stg2": "https://s2-smi-api-cdn.ecom-stg.samsung.com"
+    }
+}
