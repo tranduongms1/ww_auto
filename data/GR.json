@@ -1,0 +1,11 @@
+{
+    "cluster": "SMN3",
+    "stores": {
+        "smb": "/multistore/grepp/gr_smb",
+        "employees_partner": "/multistore/grepp/employees_partner"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smn3-api-cdn.ecom-stg.samsung.com"
+    }
+}

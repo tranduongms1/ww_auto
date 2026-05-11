@@ -1,0 +1,13 @@
+{
+    "cluster": "SMI",
+    "stores": {
+        "zasme": "/business",
+        "acn_za_epp": "/multistore/zaepp/acn_za_epp",
+        "b2b": "/multistore/zaepp/b2b",
+        "rhq_epp": "/multistore/zaepp/rhq_epp"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smi-api-cdn.ecom-stg.samsung.com"
+    }
+}

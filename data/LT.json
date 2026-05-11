@@ -1,0 +1,15 @@
+{
+    "cluster": "SMN3",
+    "stores": {
+        "ltsme": "/business",
+        "lteppm": "/multistore/lteppm/lteppm",
+        "outletlt": "/multistore/lteppm/outletlt"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smn3-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://ewd1.ecom-qa.samsung.com/v1/exchange/api/ltu"
+    }
+}

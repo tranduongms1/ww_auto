@@ -1,0 +1,8 @@
+{
+    "cluster": "SMN3",
+    "stores": {},
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smn3-api-cdn.ecom-stg.samsung.com"
+    }
+}

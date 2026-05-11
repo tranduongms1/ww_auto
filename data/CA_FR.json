@@ -1,0 +1,17 @@
+{
+    "cluster": "SMC",
+    "stores": {},
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smc-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "prod": "https://p1.ecom.samsung.com/v1/exchange/api/can",
+        "stg2": "https://ued1.ecom-qa.samsung.com/v1/exchange/api/can"
+    },
+    "tradeIn": {
+        "brand": "Samsung",
+        "model": "Galaxy S24 Ultra",
+        "imei": "355338501827039"
+    }
+}

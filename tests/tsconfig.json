@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "baseUrl": "../web",
+        "esModuleInterop": true
+    }
+}

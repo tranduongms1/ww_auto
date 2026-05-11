@@ -1,0 +1,15 @@
+{
+    "cluster": "SMB",
+    "stores": {
+        "pesme": "/business",
+        "ventab2b": "/multistore/ventab2b/ventab2b",
+        "ventaestudiantes": "/multistore/peeppmulti/ventaestudiantes"
+    },
+    "apiDomains": {
+        "prod": "https://api.shop.samsung.com",
+        "stg2": "https://s2-smb-api-cdn.ecom-stg.samsung.com"
+    },
+    "exchangeEndpoints": {
+        "stg2": "https://ued1.ecom-qa.samsung.com/v1/exchange/api/per"
+    }
+}
